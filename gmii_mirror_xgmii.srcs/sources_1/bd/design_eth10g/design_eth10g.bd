@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0x0" bd:device="xcku040-fbva676-1-c" bd:synthFlowMode="Hierarchical" bd:tool_version="2018.2" bd:top="design_eth10g" bd:version="1.00.a">
+
+  <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
+    <spirit:vendor>xilinx.com</spirit:vendor>
+    <spirit:library>BlockDiagram</spirit:library>
+    <spirit:name>design_eth10g</spirit:name>
+    <spirit:version>1.00.a</spirit:version>
+    <spirit:parameters>
+      <spirit:parameter>
+        <spirit:name>isTop</spirit:name>
+        <spirit:value spirit:format="bool" spirit:resolve="immediate">true</spirit:value>
+      </spirit:parameter>
+    </spirit:parameters>
+    <spirit:busInterfaces>
+      <spirit:busInterface>
+        <spirit:name>MGTCLK0</spirit:name>
+        <spirit:slave/>
+        <spirit:busType spirit:library="interface" spirit:name="diff_clock" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:abstractionType spirit:library="interface" spirit:name="diff_clock_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>FREQ_HZ</spirit:name>
+            <spirit:value>156250000</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:busInterface>
+      <spirit:busInterface>
+        <spirit:name>RST.RESET</spirit:name>
+        <spirit:displayName>Reset</spirit:displayName>
+        <spirit:description>Reset</spirit:description>
+        <spirit:busType spirit:library="signal" spirit:name="reset" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:abstractionType spirit:library="signal" spirit:name="reset_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:slave/>
+        <spirit:portMaps>
+          <spirit:portMap>
+            <spirit:logicalPort>
+              <spirit:name>RST</spirit:name>
+            </spirit:logicalPort>
+            <spirit:physicalPort>
+              <spirit:name>reset</spirit:name>
+            </spirit:physicalPort>
+          </spirit:portMap>
+        </spirit:portMaps>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>POLARITY</spirit:name>
+            <spirit:value>ACTIVE_HIGH</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:busInterface>
+      <spirit:busInterface>
+        <spirit:name>CLK.SYSCLK_125</spirit:name>
+        <spirit:displayName>Clk</spirit:displayName>
+        <spirit:description>Clock</spirit:description>
+        <spirit:busType spirit:library="signal" spirit:name="clock" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:abstractionType spirit:library="signal" spirit:name="clock_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:slave/>
+        <spirit:portMaps>
+          <spirit:portMap>
+            <spirit:logicalPort>
+              <spirit:name>CLK</spirit:name>
+            </spirit:logicalPort>
+            <spirit:physicalPort>
+              <spirit:name>sysclk_125</spirit:name>
+            </spirit:physicalPort>
+          </spirit:portMap>
+        </spirit:portMaps>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>PHASE</spirit:name>
+            <spirit:value>0.0</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>CLK_DOMAIN</spirit:name>
+            <spirit:value>design_eth10g_clk_wiz_0_0_clk_100</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:busInterface>
+    </spirit:busInterfaces>
+    <spirit:model>
+      <spirit:views>
+        <spirit:view>
+          <spirit:name>BlockDiagram</spirit:name>
+          <spirit:envIdentifier>:vivado.xilinx.com:</spirit:envIdentifier>
+          <spirit:hierarchyRef spirit:library="BlockDiagram" spirit:name="design_eth10g_imp" spirit:vendor="xilinx.com" spirit:version="1.00.a"/>
+        </spirit:view>
+      </spirit:views>
+      <spirit:ports>
+        <spirit:port>
+          <spirit:name>SFP1_RX_LOS</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>SFP1_RX_N</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>SFP1_RX_P</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>SFP1_TX_DISABLE</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>SFP1_TX_N</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>SFP1_TX_P</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>reset</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>sysclk_125</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+      </spirit:ports>
+    </spirit:model>
+  </spirit:component>
+
+  <spirit:design xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
+    <spirit:vendor>xilinx.com</spirit:vendor>
+    <spirit:library>BlockDiagram</spirit:library>
+    <spirit:name>design_eth10g_imp</spirit:name>
+    <spirit:version>1.00.a</spirit:version>
+    <spirit:componentInstances>
+      <spirit:componentInstance>
+        <spirit:instanceName>eth_ctrl_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="eth_ctrl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_eth10g_eth_ctrl_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">eth_ctrl</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>ten_gig_eth_pcs_pma_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="ten_gig_eth_pcs_pma" spirit:vendor="xilinx.com" spirit:version="6.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_eth10g_ten_gig_eth_pcs_pma_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="base_kr">BASE-R</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="no_ebuff">false</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="SupportLevel">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Locations">X0Y8</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="RefClk">clk0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+    </spirit:componentInstances>
+    <spirit:interconnections>
+      <spirit:interconnection>
+        <spirit:name>ten_gig_eth_pcs_pma_0_core_to_gt_drp</spirit:name>
+        <spirit:activeInterface spirit:busRef="core_to_gt_drp" spirit:componentRef="ten_gig_eth_pcs_pma_0"/>
+        <spirit:activeInterface spirit:busRef="gt_drp" spirit:componentRef="ten_gig_eth_pcs_pma_0"/>
+      </spirit:interconnection>
+    </spirit:interconnections>
+    <spirit:adHocConnections>
+      <spirit:adHocConnection>
+        <spirit:name>dclk_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="sysclk_125"/>
+        <spirit:internalPortReference spirit:componentRef="ten_gig_eth_pcs_pma_0" spirit:portRef="dclk"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>eth_ctrl_0_clken</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="eth_ctrl_0" spirit:portRef="clken"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>eth_ctrl_0_mdc</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="eth_ctrl_0" spirit:portRef="mdc"/>
+        <spirit:internalPortReference spirit:componentRef="ten_gig_eth_pcs_pma_0" spirit:portRef="mdc"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>eth_ctrl_0_mdio_w</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="eth_ctrl_0" spirit:portRef="mdio_w"/>
+        <spirit:internalPortReference spirit:componentRef="ten_gig_eth_pcs_pma_0" spirit:portRef="mdio_in"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>eth_ctrl_0_pma_pmd_type</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="eth_ctrl_0" spirit:portRef="pma_pmd_type"/>
+        <spirit:internalPortReference spirit:componentRef="ten_gig_eth_pcs_pma_0" spirit:portRef="pma_pmd_type"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>eth_ctrl_0_prtad</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="eth_ctrl_0" spirit:portRef="prtad"/>
+        <spirit:internalPortReference spirit:componentRef="ten_gig_eth_pcs_pma_0" spirit:portRef="prtad"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>eth_ctrl_0_signal_detect</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="eth_ctrl_0" spirit:portRef="signal_detect"/>
+        <spirit:internalPortReference spirit:componentRef="ten_gig_eth_pcs_pma_0" spirit:portRef="signal_detect"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>eth_ctrl_0_sim_speedup_control</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="eth_ctrl_0" spirit:portRef="sim_speedup_control"/>
+        <spirit:internalPortReference spirit:componentRef="ten_gig_eth_pcs_pma_0" spirit:portRef="sim_speedup_control"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>eth_ctrl_0_tx_fault</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="eth_ctrl_0" spirit:portRef="tx_fault"/>
+        <spirit:internalPortReference spirit:componentRef="ten_gig_eth_pcs_pma_0" spirit:portRef="tx_fault"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>reset_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="reset"/>
+        <spirit:internalPortReference spirit:componentRef="ten_gig_eth_pcs_pma_0" spirit:portRef="reset"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>rx_loss_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="SFP1_RX_LOS"/>
+        <spirit:internalPortReference spirit:componentRef="eth_ctrl_0" spirit:portRef="rx_loss"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>rxn_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="SFP1_RX_N"/>
+        <spirit:internalPortReference spirit:componentRef="ten_gig_eth_pcs_pma_0" spirit:portRef="rxn"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>rxp_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="SFP1_RX_P"/>
+        <spirit:internalPortReference spirit:componentRef="ten_gig_eth_pcs_pma_0" spirit:portRef="rxp"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>ten_gig_eth_pcs_pma_0_drp_req</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="ten_gig_eth_pcs_pma_0" spirit:portRef="drp_req"/>
+        <spirit:internalPortReference spirit:componentRef="ten_gig_eth_pcs_pma_0" spirit:portRef="drp_gnt"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>ten_gig_eth_pcs_pma_0_tx_disable</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="ten_gig_eth_pcs_pma_0" spirit:portRef="tx_disable"/>
+        <spirit:externalPortReference spirit:portRef="SFP1_TX_DISABLE"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>ten_gig_eth_pcs_pma_0_txn</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="ten_gig_eth_pcs_pma_0" spirit:portRef="txn"/>
+        <spirit:externalPortReference spirit:portRef="SFP1_TX_N"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>ten_gig_eth_pcs_pma_0_txp</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="ten_gig_eth_pcs_pma_0" spirit:portRef="txp"/>
+        <spirit:externalPortReference spirit:portRef="SFP1_TX_P"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>eth_ctrl_0_xgmii_txc</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="eth_ctrl_0" spirit:portRef="xgmii_txc"/>
+        <spirit:internalPortReference spirit:componentRef="ten_gig_eth_pcs_pma_0" spirit:portRef="xgmii_txc"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>eth_ctrl_0_xgmii_txd</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="eth_ctrl_0" spirit:portRef="xgmii_txd"/>
+        <spirit:internalPortReference spirit:componentRef="ten_gig_eth_pcs_pma_0" spirit:portRef="xgmii_txd"/>
+      </spirit:adHocConnection>
+    </spirit:adHocConnections>
+    <spirit:hierConnections>
+      <spirit:hierConnection spirit:interfaceRef="MGTCLK0/refclk_diff_port_1">
+        <spirit:activeInterface spirit:busRef="refclk_diff_port" spirit:componentRef="ten_gig_eth_pcs_pma_0"/>
+      </spirit:hierConnection>
+    </spirit:hierConnections>
+  </spirit:design>
+
+</bd:repository>

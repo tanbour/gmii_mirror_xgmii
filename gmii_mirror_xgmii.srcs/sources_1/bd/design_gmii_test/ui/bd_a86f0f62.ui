@@ -1,0 +1,70 @@
+{
+   ExpandedHierarchyInLayout: "",
+   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 TLS
+#  -string -flagsOSRD
+preplace port PHY1_RX_CLK -pg 1 -y 390 -defaultsOSRD
+preplace port PHY1_MDC -pg 1 -y 60 -defaultsOSRD
+preplace port PHY1_TX_CTRL -pg 1 -y 310 -defaultsOSRD
+preplace port PHY1_RX_CTRL -pg 1 -y 410 -defaultsOSRD
+preplace port default_sysclk_250 -pg 1 -y 710 -defaultsOSRD
+preplace port PHY1_GTX_CLK -pg 1 -y 200 -defaultsOSRD
+preplace port PHY1_MDIO -pg 1 -y 80 -defaultsOSRD
+preplace port reset -pg 1 -y 570 -defaultsOSRD
+preplace portBus PHY1_RESETN -pg 1 -y 400 -defaultsOSRD
+preplace portBus PHY1_RX_D -pg 1 -y 430 -defaultsOSRD
+preplace portBus PHY1_TX_D -pg 1 -y 290 -defaultsOSRD
+preplace inst fifo_read_throttle_0 -pg 1 -lvl 7 -y 310 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 1 -y 590 -defaultsOSRD
+preplace inst proc_sys_reset_1 -pg 1 -lvl 8 -y 490 -defaultsOSRD
+preplace inst xgmii_to_gmii_0 -pg 1 -lvl 5 -y 270 -defaultsOSRD
+preplace inst gmii_tx_fcs_0 -pg 1 -lvl 8 -y 290 -defaultsOSRD
+preplace inst rgmii_to_gmii_0 -pg 1 -lvl 1 -y 410 -defaultsOSRD
+preplace inst address_mac_ip_0 -pg 1 -lvl 3 -y 110 -defaultsOSRD
+preplace inst eth_phy_ctrl_0 -pg 1 -lvl 9 -y 90 -defaultsOSRD
+preplace inst gmii_to_rgmii_0 -pg 1 -lvl 9 -y 300 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 8 -y 720 -defaultsOSRD
+preplace inst gmii_to_xgmil_0 -pg 1 -lvl 3 -y 340 -defaultsOSRD
+preplace inst fifo_generator_0 -pg 1 -lvl 6 -y 290 -defaultsOSRD
+preplace inst xgmii_test_server_0 -pg 1 -lvl 4 -y 120 -defaultsOSRD
+preplace inst gmii_rx_fcs_0 -pg 1 -lvl 2 -y 400 -defaultsOSRD
+preplace netloc Conn1 1 0 8 NJ 710 NJ 710 NJ 710 NJ 710 NJ 710 NJ 710 NJ 710 NJ
+preplace netloc eth_phy_ctrl_0_MDC 1 9 1 NJ
+preplace netloc clk_wiz_0_locked 1 0 9 30 700 NJ 700 NJ 700 NJ 700 NJ 700 NJ 700 NJ 700 2650 640 3030
+preplace netloc gmii_to_rgmii_0_TX_CTRL_OUT 1 9 1 NJ
+preplace netloc CLK_1 1 5 5 1830 180 2310 220 2650 390 3050 200 NJ
+preplace netloc fifo_read_throttle_0_CTRL_OUT 1 7 1 N
+preplace netloc gmii_to_rgmii_0_TX_D_OUT 1 9 1 NJ
+preplace netloc gmii_to_xgmil_0_RXLEN_OUT 1 3 1 1100
+preplace netloc xgmii_to_gmii_0_TX_D_OUT 1 5 1 N
+preplace netloc fifo_generator_0_m_axis_tdata 1 6 1 2290
+preplace netloc proc_sys_reset_1_peripheral_aresetn 1 7 3 2660 380 3020 400 NJ
+preplace netloc rgmii_to_gmii_0_GMII_CTRL_OUT 1 1 1 390
+preplace netloc gmii_tx_fcs_0_GMII_TX_D 1 8 1 N
+preplace netloc proc_sys_reset_0_interconnect_aresetn 1 1 5 NJ 610 NJ 610 NJ 610 NJ 610 1830
+preplace netloc xgmii_test_server_0_TXLEN_OUT 1 4 1 1480
+preplace netloc xgmii_test_server_0_TXD_OUT 1 4 1 1500
+preplace netloc CE_1 1 3 2 1080 270 NJ
+preplace netloc fifo_read_throttle_0_READ_EN_OUT 1 6 2 2300J 190 2640
+preplace netloc PHY1_RX_CLK_1 1 0 6 20 490 400 510 750 240 1060 240 1490 170 1820J
+preplace netloc address_mac_ip_0_IP_ADDR 1 3 1 N
+preplace netloc xgmii_to_gmii_0_TX_CTRL_OUT 1 5 1 N
+preplace netloc proc_sys_reset_1_peripheral_reset 1 6 3 2320 200 NJ 200 3030
+preplace netloc rgmii_to_gmii_0_GMII_D_OUT 1 1 1 N
+preplace netloc gmii_rx_fcs_0_RXD_OUT 1 2 1 N
+preplace netloc fifo_read_throttle_0_DATA_OUT 1 7 1 N
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 1 4 410 520 760 250 NJ 250 NJ
+preplace netloc proc_sys_reset_0_peripheral_reset 1 1 3 NJ 590 NJ 590 1070
+preplace netloc gmii_tx_fcs_0_GMII_TX_ERR 1 8 1 3020
+preplace netloc gmii_tx_fcs_0_GMII_TX_CTRL 1 8 1 3040
+preplace netloc PHY1_RX_CTRL_1 1 0 1 NJ
+preplace netloc PHY1_RX_D_1 1 0 1 NJ
+preplace netloc Net 1 9 1 NJ
+preplace netloc address_mac_ip_0_MAC_ADDR 1 3 1 N
+preplace netloc reset_1 1 0 8 20 690 NJ 690 NJ 690 NJ 690 NJ 690 NJ 690 NJ 690 2640
+preplace netloc gmii_rx_fcs_0_RXC_OUT 1 2 1 N
+preplace netloc gmii_to_xgmil_0_RXD_OUT 1 3 1 1090
+preplace netloc fifo_generator_0_m_axis_tvalid 1 6 1 N
+levelinfo -pg 1 0 210 580 910 1290 1660 2060 2480 2840 3200 3370 -top 0 -bot 800
+",
+}
+

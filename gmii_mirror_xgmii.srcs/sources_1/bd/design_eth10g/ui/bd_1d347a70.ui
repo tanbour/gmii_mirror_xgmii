@@ -1,0 +1,40 @@
+{
+   ExpandedHierarchyInLayout: "",
+   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 TLS
+#  -string -flagsOSRD
+preplace port SFP1_RX_N -pg 1 -y 330 -defaultsOSRD
+preplace port sysclk_125 -pg 1 -y 290 -defaultsOSRD
+preplace port SFP1_RX_P -pg 1 -y 310 -defaultsOSRD
+preplace port SFP1_TX_N -pg 1 -y 170 -defaultsOSRD
+preplace port MGTCLK0 -pg 1 -y 230 -defaultsOSRD
+preplace port SFP1_RX_LOS -pg 1 -y 480 -defaultsOSRD
+preplace port SFP1_TX_P -pg 1 -y 150 -defaultsOSRD
+preplace port SFP1_TX_DISABLE -pg 1 -y 450 -defaultsOSRD
+preplace port reset -pg 1 -y 270 -defaultsOSRD
+preplace inst ten_gig_eth_pcs_pma_0 -pg 1 -lvl 2 -y 260 -defaultsOSRD
+preplace inst eth_ctrl_0 -pg 1 -lvl 1 -y 480 -defaultsOSRD
+preplace netloc rx_loss_1 1 0 1 NJ
+preplace netloc eth_ctrl_0_mdio_w 1 1 1 330
+preplace netloc rxp_1 1 0 2 NJ 310 NJ
+preplace netloc ten_gig_eth_pcs_pma_0_core_to_gt_drp 1 1 2 380 10 790
+preplace netloc rxn_1 1 0 2 NJ 330 NJ
+preplace netloc eth_ctrl_0_tx_fault 1 1 1 390
+preplace netloc eth_ctrl_0_signal_detect 1 1 1 380
+preplace netloc refclk_diff_port_1 1 0 2 NJ 230 NJ
+preplace netloc eth_ctrl_0_xgmii_txc 1 1 1 340
+preplace netloc ten_gig_eth_pcs_pma_0_txn 1 2 1 NJ
+preplace netloc eth_ctrl_0_sim_speedup_control 1 1 1 370
+preplace netloc eth_ctrl_0_pma_pmd_type 1 1 1 400
+preplace netloc eth_ctrl_0_xgmii_txd 1 1 1 350
+preplace netloc ten_gig_eth_pcs_pma_0_tx_disable 1 2 1 NJ
+preplace netloc ten_gig_eth_pcs_pma_0_txp 1 2 1 NJ
+preplace netloc dclk_1 1 0 2 NJ 290 NJ
+preplace netloc eth_ctrl_0_clken 1 1 1 N
+preplace netloc reset_1 1 0 2 NJ 270 NJ
+preplace netloc eth_ctrl_0_prtad 1 1 1 360
+preplace netloc ten_gig_eth_pcs_pma_0_drp_req 1 1 2 410 510 790
+preplace netloc eth_ctrl_0_mdc 1 1 1 320
+levelinfo -pg 1 0 170 600 810 -top 0 -bot 630
+",
+}
+

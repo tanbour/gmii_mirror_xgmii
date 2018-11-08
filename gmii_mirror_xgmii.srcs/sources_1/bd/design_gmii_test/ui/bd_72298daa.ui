@@ -1,0 +1,84 @@
+{
+   ExpandedHierarchyInLayout: "/ETH1",
+   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 TLS
+#  -string -flagsOSRD
+preplace port PHY2_MDC -pg 1 -y 80 -defaultsOSRD
+preplace port PHY2_TX_CTRL -pg 1 -y 120 -defaultsOSRD
+preplace port default_sysclk_250 -pg 1 -y 70 -defaultsOSRD
+preplace port PHY2_MDIO -pg 1 -y 60 -defaultsOSRD
+preplace port DEBUG_CLK -pg 1 -y 220 -defaultsOSRD
+preplace port PHY2_GTX_CLK -pg 1 -y 160 -defaultsOSRD
+preplace port PHY2_RX_CTRL -pg 1 -y 110 -defaultsOSRD
+preplace port PHY2_RX_CLK -pg 1 -y 130 -defaultsOSRD
+preplace port reset -pg 1 -y 150 -defaultsOSRD
+preplace portBus PHY2_TX_D -pg 1 -y 100 -defaultsOSRD
+preplace portBus PHY2_RESETN -pg 1 -y 140 -defaultsOSRD
+preplace portBus PHY2_RX_D -pg 1 -y 90 -defaultsOSRD
+preplace inst ETH1|gmii_to_xgmil_0 -pg 1 -lvl 3 -y 375 -defaultsOSRD
+preplace inst ETH1|rgmii_to_gmii_0 -pg 1 -lvl 1 -y 445 -defaultsOSRD
+preplace inst ETH1|xgmii_test_server_0 -pg 1 -lvl 4 -y 335 -defaultsOSRD
+preplace inst ETH1 -pg 1 -lvl 1 -y 115 -defaultsOSRD -resize 376 190
+preplace inst ETH1|xgmii_to_gmii_0 -pg 1 -lvl 5 -y 485 -defaultsOSRD
+preplace inst ETH1|clk_wiz_0 -pg 1 -lvl 8 -y 105 -defaultsOSRD
+preplace inst ETH1|gmii_tx_fcs_0 -pg 1 -lvl 8 -y 505 -defaultsOSRD
+preplace inst ETH1|eth_phy_ctrl_0 -pg 1 -lvl 9 -y 205 -defaultsOSRD
+preplace inst ETH1|gmii_rx_fcs_0 -pg 1 -lvl 2 -y 435 -defaultsOSRD
+preplace inst ETH1|gmii_to_rgmii_0 -pg 1 -lvl 9 -y 455 -defaultsOSRD
+preplace inst ETH1|proc_sys_reset_0 -pg 1 -lvl 1 -y 605 -defaultsOSRD
+preplace inst ETH1|fifo_generator_0 -pg 1 -lvl 6 -y 505 -defaultsOSRD
+preplace inst ETH1|fifo_read_throttle_0 -pg 1 -lvl 7 -y 525 -defaultsOSRD
+preplace inst ETH1|proc_sys_reset_1 -pg 1 -lvl 8 -y 305 -defaultsOSRD
+preplace inst ETH1|address_mac_ip_0 -pg 1 -lvl 3 -y 515 -defaultsOSRD
+preplace netloc ETH1|Conn1 1 0 8 NJ 95 NJ 95 NJ 95 NJ 95 NJ 95 NJ 95 NJ 95 N
+preplace netloc ETH1|proc_sys_reset_0_interconnect_aresetn 1 1 5 NJ 625 NJ 625 NJ 625 NJ 625 1900
+preplace netloc ETH1|gmii_tx_fcs_0_GMII_TX_ERR 1 8 1 N
+preplace netloc ETH1|PHY1_RX_D_1 1 0 1 80
+preplace netloc ETH1|address_mac_ip_0_IP_ADDR 1 3 1 1140
+preplace netloc ETH1|gmii_to_rgmii_0_TX_CTRL_OUT 1 9 1 3430
+preplace netloc ETH1|gmii_to_rgmii_0_TX_D_OUT 1 9 1 3420
+preplace netloc ETH1|Net 1 9 1 3420
+preplace netloc ETH1|xgmii_to_gmii_0_TX_CTRL_OUT 1 5 1 N
+preplace netloc ETH1|CLK_1 1 5 5 1900 395 2380 395 2730 195 3120 355 NJ
+preplace netloc ETH1_PHY1_TX_CTRL 1 1 1 3640J
+preplace netloc ETH1_PHY1_TX_D 1 1 1 3630J
+preplace netloc ETH1|PHY1_RX_CLK_1 1 0 6 90 365 470 325 820 275 1120 215 1570 385 1890J
+preplace netloc ETH1|gmii_rx_fcs_0_RXD_OUT 1 2 1 N
+preplace netloc ETH1|reset_1 1 0 8 70 205 NJ 205 NJ 205 NJ 205 NJ 205 NJ 205 NJ 205 2710
+preplace netloc proc_sys_reset_1_peripheral_aresetn 1 1 1 3650J
+preplace netloc ETH1|proc_sys_reset_0_peripheral_aresetn 1 1 4 480 545 820 585 1150J 465 NJ
+preplace netloc ETH1|xgmii_test_server_0_TXD_OUT 1 4 1 1560
+preplace netloc ETH1|fifo_generator_0_m_axis_tdata 1 6 1 2360
+preplace netloc ETH1|proc_sys_reset_1_peripheral_aresetn 1 7 3 2740 205 3100 335 NJ
+preplace netloc ETH1|gmii_tx_fcs_0_GMII_TX_CTRL 1 8 1 N
+preplace netloc ETH1|eth_phy_ctrl_0_MDC 1 9 1 N
+preplace netloc ETH1|proc_sys_reset_0_peripheral_reset 1 1 3 460J 285 NJ 285 1120
+preplace netloc ETH1|gmii_to_xgmil_0_RXD_OUT 1 3 1 N
+preplace netloc ETH1|xgmii_test_server_0_TXLEN_OUT 1 4 1 1550
+preplace netloc ETH1|xgmii_to_gmii_0_TX_D_OUT 1 5 1 N
+preplace netloc ETH1|fifo_read_throttle_0_CTRL_OUT 1 7 1 N
+preplace netloc default_sysclk_250_1 1 0 1 -100J
+preplace netloc PHY1_RX_CLK_1 1 0 2 -130 725 3670J
+preplace netloc ETH1|address_mac_ip_0_MAC_ADDR 1 3 1 1120
+preplace netloc ETH1|gmii_to_xgmil_0_RXLEN_OUT 1 3 1 1130
+preplace netloc ETH1|clk_wiz_0_locked 1 0 9 100 195 NJ 195 NJ 195 NJ 195 NJ 195 NJ 195 NJ 195 2720 185 3100
+preplace netloc ETH1|proc_sys_reset_1_peripheral_reset 1 6 3 2390 415 NJ 415 3110
+preplace netloc ETH1|PHY1_RX_CTRL_1 1 0 1 N
+preplace netloc ETH1|rgmii_to_gmii_0_GMII_CTRL_OUT 1 1 1 470
+preplace netloc ETH1|rgmii_to_gmii_0_GMII_D_OUT 1 1 1 N
+preplace netloc ETH1|fifo_generator_0_m_axis_tvalid 1 6 1 N
+preplace netloc ETH1|fifo_read_throttle_0_DATA_OUT 1 7 1 N
+preplace netloc ETH1|gmii_tx_fcs_0_GMII_TX_D 1 8 1 3110
+preplace netloc Net 1 1 1 3610J
+preplace netloc ETH1|gmii_rx_fcs_0_RXC_OUT 1 2 1 N
+preplace netloc ETH1|CE_1 1 3 2 1160 485 NJ
+preplace netloc ETH1|fifo_read_throttle_0_READ_EN_OUT 1 6 2 2370J 435 2710
+preplace netloc ETH1_PHY1_MDC 1 1 1 3620J
+preplace netloc reset_1 1 0 1 -140J
+preplace netloc RGMII_CTRL_IN_1 1 0 1 -120J
+preplace netloc clk_wiz_0_clk_125 1 1 1 3660J
+preplace netloc RGMII_D_IN_1 1 0 1 -110J
+levelinfo -pg 1 -160 230 3690 -top -10 -bot 750
+levelinfo -hier ETH1 * 280 650 970 1360 1730 2130 2550 2920 3270 *
+",
+}
+0

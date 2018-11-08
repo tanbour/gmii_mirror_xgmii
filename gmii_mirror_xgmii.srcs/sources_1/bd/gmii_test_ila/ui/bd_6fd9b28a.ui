@@ -1,0 +1,74 @@
+{
+   ExpandedHierarchyInLayout: "",
+   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 TLS
+#  -string -flagsOSRD
+preplace port PHY1_RX_CLK -pg 1 -y 560 -defaultsOSRD
+preplace port PHY1_MDC -pg 1 -y 110 -defaultsOSRD
+preplace port PHY1_TX_CTRL -pg 1 -y 360 -defaultsOSRD
+preplace port PHY1_RX_CTRL -pg 1 -y 580 -defaultsOSRD
+preplace port default_sysclk_250 -pg 1 -y 460 -defaultsOSRD
+preplace port PHY1_GTX_CLK -pg 1 -y 250 -defaultsOSRD
+preplace port DEBUG_CLK -pg 1 -y 450 -defaultsOSRD
+preplace port PHY1_MDIO -pg 1 -y 130 -defaultsOSRD
+preplace port reset -pg 1 -y 480 -defaultsOSRD
+preplace portBus PHY1_RESETN -pg 1 -y 230 -defaultsOSRD
+preplace portBus PHY1_RX_D -pg 1 -y 600 -defaultsOSRD
+preplace portBus PHY1_TX_D -pg 1 -y 340 -defaultsOSRD
+preplace inst fifo_read_throttle_0 -pg 1 -lvl 8 -y 410 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 2 -y 370 -defaultsOSRD
+preplace inst proc_sys_reset_1 -pg 1 -lvl 9 -y 460 -defaultsOSRD
+preplace inst xgmii_to_gmii_0 -pg 1 -lvl 6 -y 380 -defaultsOSRD
+preplace inst gmii_tx_fcs_0 -pg 1 -lvl 9 -y 250 -defaultsOSRD
+preplace inst rgmii_to_gmii_0 -pg 1 -lvl 2 -y 590 -defaultsOSRD
+preplace inst address_mac_ip_0 -pg 1 -lvl 4 -y 290 -defaultsOSRD
+preplace inst system_ila_0 -pg 1 -lvl 8 -y 150 -defaultsOSRD
+preplace inst eth_phy_ctrl_0 -pg 1 -lvl 10 -y 140 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -y 470 -defaultsOSRD
+preplace inst gmii_to_xgmil_0 -pg 1 -lvl 4 -y 610 -defaultsOSRD
+preplace inst gmii_to_rgmii_0 -pg 1 -lvl 10 -y 350 -defaultsOSRD
+preplace inst fifo_generator_0 -pg 1 -lvl 7 -y 360 -defaultsOSRD
+preplace inst xgmii_test_server_0 -pg 1 -lvl 5 -y 340 -defaultsOSRD
+preplace inst gmii_rx_fcs_0 -pg 1 -lvl 3 -y 630 -defaultsOSRD
+preplace netloc eth_phy_ctrl_0_MDC 1 10 1 NJ
+preplace netloc gmii_to_rgmii_0_TX_CTRL_OUT 1 10 1 NJ
+preplace netloc clk_wiz_0_locked 1 2 4 690 470 1060 210 NJ 210 1850
+preplace netloc clk_wiz_0_clk_ila 1 1 7 240J 190 NJ 190 NJ 190 NJ 190 NJ 190 NJ 190 2700
+preplace netloc gmii_to_xgmil_0_CE_OUT 1 4 2 1420 460 1840J
+preplace netloc gmii_to_rgmii_0_TX_D_OUT 1 10 1 NJ
+preplace netloc fifo_read_throttle_0_CTRL_OUT 1 8 1 3140
+preplace netloc xgmii_to_gmii_0_TX_D_OUT 1 6 2 2210 210 2720
+preplace netloc proc_sys_reset_1_peripheral_aresetn 1 8 3 3170 350 3550 230 NJ
+preplace netloc gmii_to_xgmil_0_RXLEN_OUT 1 4 1 1440
+preplace netloc clk_wiz_0_locked1 1 1 8 280 490 700J 510 1080J 520 NJ 520 NJ 520 NJ 520 NJ 520 3180J
+preplace netloc rgmii_to_gmii_0_GMII_CTRL_OUT 1 2 1 670
+preplace netloc gmii_tx_fcs_0_GMII_TX_D 1 9 1 3560
+preplace netloc default_sysclk_250_1 1 0 1 NJ
+preplace netloc xgmii_test_server_0_TXLEN_OUT 1 5 1 1820
+preplace netloc xgmii_test_server_0_TXD_OUT 1 5 1 1830
+preplace netloc proc_sys_reset_0_interconnect_aresetn 1 2 5 700 460 NJ 460 1400J 490 NJ 490 2240J
+preplace netloc fifo_read_throttle_0_READ_EN_OUT 1 7 2 2750 530 3110
+preplace netloc PHY1_RX_CLK_1 1 0 11 NJ 560 290 510 680 520 1070 360 1410 220 1840 240 2220 240 2710J 290 3110J 150 3540 50 3890J
+preplace netloc xgmii_to_gmii_0_TX_CTRL_OUT 1 6 2 2200 200 2710
+preplace netloc proc_sys_reset_1_peripheral_reset 1 7 3 2790 320 3150J 340 3590
+preplace netloc fifo_generator_0_valid 1 7 1 2780
+preplace netloc address_mac_ip_0_IP_ADDR 1 4 1 1380
+preplace netloc rgmii_to_gmii_0_GMII_D_OUT 1 2 1 660
+preplace netloc gmii_rx_fcs_0_RXD_OUT 1 3 1 1040
+preplace netloc fifo_read_throttle_0_DATA_OUT 1 8 1 3120
+preplace netloc proc_sys_reset_0_peripheral_reset 1 2 3 700 220 NJ 220 1400J
+preplace netloc fifo_generator_0_empty 1 6 2 2230 230 2730
+preplace netloc fifo_generator_0_dout 1 7 1 2760
+preplace netloc gmii_tx_fcs_0_GMII_TX_ERR 1 9 1 3540
+preplace netloc gmii_tx_fcs_0_GMII_TX_CTRL 1 9 1 3570
+preplace netloc Net 1 10 1 NJ
+preplace netloc reset_1 1 0 9 20 390 300 500 NJ 500 NJ 500 NJ 500 NJ 500 2210J 510 NJ 510 3170J
+preplace netloc address_mac_ip_0_MAC_ADDR 1 4 1 1390
+preplace netloc RGMII_CTRL_IN_1 1 0 10 NJ 580 250 10 NJ 10 NJ 10 NJ 10 NJ 10 NJ 10 NJ 10 NJ 10 3570J
+preplace netloc gmii_to_xgmil_0_RXD_OUT 1 4 1 1430
+preplace netloc gmii_rx_fcs_0_RXC_OUT 1 3 1 1050
+preplace netloc clk_wiz_0_clk_125 1 1 10 270 480 NJ 480 NJ 480 NJ 480 NJ 480 2230 480 2770 500 3160 360 3580 250 NJ
+preplace netloc RGMII_D_IN_1 1 0 10 NJ 600 260 200 NJ 200 NJ 200 NJ 200 NJ 200 2190J 220 2740J 300 3130J 160 NJ
+levelinfo -pg 1 0 130 480 870 1230 1630 2030 2470 2950 3360 3740 3910 -top 0 -bot 740
+",
+}
+0

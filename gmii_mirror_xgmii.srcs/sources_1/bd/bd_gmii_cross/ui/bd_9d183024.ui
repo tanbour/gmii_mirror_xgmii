@@ -1,0 +1,79 @@
+{
+   ExpandedHierarchyInLayout: "",
+   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 TLS
+#  -string -flagsOSRD
+preplace port PHY2_MDC -pg 1 -y 340 -defaultsOSRD
+preplace port PHY1_RX_CLK -pg 1 -y 350 -defaultsOSRD
+preplace port SFP1_RX_N -pg 1 -y 1120 -defaultsOSRD
+preplace port PHY1_MDC -pg 1 -y 90 -defaultsOSRD
+preplace port PHY2_TX_CTRL -pg 1 -y 380 -defaultsOSRD
+preplace port PHY1_RX_CTRL -pg 1 -y 330 -defaultsOSRD
+preplace port PHY1_TX_CTRL -pg 1 -y 130 -defaultsOSRD
+preplace port default_sysclk_250 -pg 1 -y 920 -defaultsOSRD
+preplace port SFP1_RX_P -pg 1 -y 1140 -defaultsOSRD
+preplace port PHY2_MDIO -pg 1 -y 320 -defaultsOSRD
+preplace port PHY1_GTX_CLK -pg 1 -y 670 -defaultsOSRD
+preplace port SFP1_TX_N -pg 1 -y 1070 -defaultsOSRD
+preplace port DEBUG_CLK -pg 1 -y 240 -defaultsOSRD
+preplace port MGTCLK0 -pg 1 -y 1060 -defaultsOSRD
+preplace port SFP1_RX_LOS -pg 1 -y 1160 -defaultsOSRD
+preplace port PHY2_RX_CTRL -pg 1 -y 80 -defaultsOSRD
+preplace port PHY2_GTX_CLK -pg 1 -y 690 -defaultsOSRD
+preplace port SFP1_TX_P -pg 1 -y 1090 -defaultsOSRD
+preplace port PHY1_MDIO -pg 1 -y 70 -defaultsOSRD
+preplace port SFP1_TX_DISABLE -pg 1 -y 1110 -defaultsOSRD
+preplace port PHY2_RX_CLK -pg 1 -y 100 -defaultsOSRD
+preplace port reset -pg 1 -y 640 -defaultsOSRD
+preplace portBus PHY2_RESETN -pg 1 -y 730 -defaultsOSRD
+preplace portBus PHY2_TX_D -pg 1 -y 360 -defaultsOSRD
+preplace portBus PHY1_RESETN -pg 1 -y 710 -defaultsOSRD
+preplace portBus PHY1_RX_D -pg 1 -y 310 -defaultsOSRD
+preplace portBus PHY1_TX_D -pg 1 -y 110 -defaultsOSRD
+preplace portBus PHY2_RX_D -pg 1 -y 60 -defaultsOSRD
+preplace inst proc_sys_reset_125 -pg 1 -lvl 1 -y 740 -defaultsOSRD
+preplace inst RX2_TX1 -pg 1 -lvl 2 -y 120 -defaultsOSRD
+preplace inst RX1_TX2 -pg 1 -lvl 2 -y 370 -defaultsOSRD
+preplace inst gmii_to_xgmii -pg 1 -lvl 1 -y 520 -defaultsOSRD -resize 222 192
+preplace inst system_ila_0 -pg 1 -lvl 2 -y 590 -defaultsOSRD
+preplace inst system_ila_1 -pg 1 -lvl 2 -y 930 -defaultsOSRD
+preplace inst eth10g_0 -pg 1 -lvl 2 -y 1130 -defaultsOSRD -resize 258 230
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -y 930 -defaultsOSRD
+preplace netloc RX2_TX1_MDC 1 2 1 NJ
+preplace netloc RX1_TX2_GMII_D 1 0 3 70 390 450 480 850
+preplace netloc RX1_TX2_TX_CTRL 1 2 1 NJ
+preplace netloc xgmii_txd_1 1 1 1 470
+preplace netloc eth10g_0_SFP1_TX_DISABLE 1 2 1 NJ
+preplace netloc RX_CLK_0_1 1 0 2 NJ 100 NJ
+preplace netloc RX2_TX1_GMII_D 1 0 3 50 370 440 250 850
+preplace netloc RX_CTRL_0_1 1 0 2 NJ 80 NJ
+preplace netloc SFP1_RX_LOS_1 1 0 2 NJ 1160 NJ
+preplace netloc RX2_TX1_TX_CTRL 1 2 1 NJ
+preplace netloc ETH10G_0_XGMII_CLK 1 0 3 40 860 540 850 840
+preplace netloc RX1_TX2_TX_D 1 2 1 NJ
+preplace netloc PHY1_RX_D_1 1 0 2 NJ 310 NJ
+preplace netloc PHY1_RX_CLK_1 1 0 3 NJ 350 530 240 NJ
+preplace netloc default_sysclk_250_1 1 0 1 NJ
+preplace netloc RX_D_0_1 1 0 2 NJ 60 NJ
+preplace netloc Net 1 2 1 NJ
+preplace netloc RX1_TX2_GMII_CTRL 1 0 3 80 400 500 490 840
+preplace netloc Net1 1 2 1 NJ
+preplace netloc eth10g_0_SFP1_TX_N 1 2 1 NJ
+preplace netloc clk_wiz_0_locked 1 0 2 80 850 490
+preplace netloc RX1_TX2_MDC 1 2 1 NJ
+preplace netloc PHY1_RX_CTRL_1 1 0 2 NJ 330 NJ
+preplace netloc SFP1_RX_P_1 1 0 2 NJ 1140 NJ
+preplace netloc RX2_TX1_GMII_CTRL 1 0 3 60 380 540 230 840
+preplace netloc RX2_TX1_TX_D 1 2 1 NJ
+preplace netloc eth10g_0_SFP1_TX_P 1 2 1 NJ
+preplace netloc clk_wiz_0_clk_125 1 0 3 30 360 520 690 850J
+preplace netloc proc_sys_reset_1_peripheral_aresetn 1 0 3 80 630 440 710 840J
+preplace netloc SFP1_RX_N_1 1 0 2 NJ 1120 NJ
+preplace netloc ETH10G_0_XGMII_RESET 1 0 3 70 840 NJ 840 850
+preplace netloc xgmii_txc_1 1 1 1 460
+preplace netloc proc_sys_reset_1_peripheral_reset 1 1 1 480
+preplace netloc reset_1 1 0 2 20 640 510
+preplace netloc MGTCLK0_1 1 0 2 NJ 1060 NJ
+levelinfo -pg 1 0 260 690 870 -top 0 -bot 1250
+",
+}
+0
