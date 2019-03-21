@@ -1,6 +1,6 @@
 
 // Copyright (C) Akira Higuchi  ( https://github.com/ahiguti )
-// Copyright (C) DeNA Co., Ltd. ( https://dena.com )
+// Copyright (C) DeNA Co.,Ltd. ( https://dena.com )
 // All rights reserved.
 // See COPYRIGHT.txt for details
 

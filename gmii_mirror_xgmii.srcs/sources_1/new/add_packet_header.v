@@ -1,17 +1,18 @@
 
 // Copyright (C) Akira Higuchi  ( https://github.com/ahiguti )
-// Copyright (C) DeNA Co., Ltd. ( https://dena.com )
+// Copyright (C) DeNA Co.,Ltd. ( https://dena.com )
 // All rights reserved.
 // See COPYRIGHT.txt for details
 
 // dataとinfoを読んでheaderを付けて出力する。
 module add_packet_header(
-  CLK, RESETN,
+  CLK, RESETN, KEEP_ERROR_PACKET,
   DATA_TDATA, DATA_TVALID, DATA_TREADY,
   INFO_TDATA, INFO_TVALID, INFO_TREADY,
   PKT_TDATA, PKT_TVALID, PKT_TREADY, PKT_TLAST);
 input CLK;
 input RESETN;
+input KEEP_ERROR_PACKET;
 (* mark_debug = "true" *) input [63:0] DATA_TDATA;
 (* mark_debug = "true" *) input DATA_TVALID;
 (* mark_debug = "true" *) output DATA_TREADY;
@@ -50,12 +51,14 @@ always @(posedge CLK) begin
     end
     if (INFO_TREADY && INFO_TVALID) begin
       len_rest <= INFO_TDATA[15:0];
-      if (INFO_TDATA[17:16] != 3) begin
+      if (!KEEP_ERROR_PACKET && INFO_TDATA[17:16] != 3) begin
+        // INFO_TDATA[17] : packet complete
+        // INFO_TDATA[16] : fcs correct
         drop_flag <= 1; // incomplete or fcs mismatch
       end else begin
         drop_flag <= 0;
         pkt_tvalid <= 1;
-        pkt_tdata <= { 48'hdeadbeef0000, INFO_TDATA[15:0] };
+        pkt_tdata <= { 32'hdeadbeef, 14'b0, INFO_TDATA[17:0] };
         pkt_tlast <= 0;
       end
     end

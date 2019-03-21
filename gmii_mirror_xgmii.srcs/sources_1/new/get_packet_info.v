@@ -1,6 +1,6 @@
 
 // Copyright (C) Akira Higuchi  ( https://github.com/ahiguti )
-// Copyright (C) DeNA Co., Ltd. ( https://dena.com )
+// Copyright (C) DeNA Co.,Ltd. ( https://dena.com )
 // All rights reserved.
 // See COPYRIGHT.txt for details
 
@@ -52,7 +52,7 @@ assign INFO_TDATA = { 6'b0, info_tdata };
 assign INFO_TVALID = info_tvalid;
 assign ERR_DROP = err_drop;
 assign ERR_INCOMPLETE = err_incomplete;
-assign ERR_FCS = err_fcs; // not fatal
+assign ERR_FCS = err_fcs;
 
 always @(posedge CLK) begin
   err_drop <= 0;

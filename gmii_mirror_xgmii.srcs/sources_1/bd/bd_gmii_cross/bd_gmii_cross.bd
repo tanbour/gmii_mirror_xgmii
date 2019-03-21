@@ -189,7 +189,7 @@
         </spirit:parameters>
       </spirit:busInterface>
       <spirit:busInterface>
-        <spirit:name>CLK.PHY1_GTX_CLK</spirit:name>
+        <spirit:name>CLK.PHY2_GTX_CLK</spirit:name>
         <spirit:displayName>Clk</spirit:displayName>
         <spirit:description>Clock</spirit:description>
         <spirit:busType spirit:library="signal" spirit:name="clock" spirit:vendor="xilinx.com" spirit:version="1.0"/>
@@ -201,7 +201,7 @@
               <spirit:name>CLK</spirit:name>
             </spirit:logicalPort>
             <spirit:physicalPort>
-              <spirit:name>PHY1_GTX_CLK</spirit:name>
+              <spirit:name>PHY2_GTX_CLK</spirit:name>
             </spirit:physicalPort>
           </spirit:portMap>
         </spirit:portMaps>
@@ -236,7 +236,7 @@
         </spirit:parameters>
       </spirit:busInterface>
       <spirit:busInterface>
-        <spirit:name>CLK.PHY2_GTX_CLK</spirit:name>
+        <spirit:name>CLK.PHY1_GTX_CLK</spirit:name>
         <spirit:displayName>Clk</spirit:displayName>
         <spirit:description>Clock</spirit:description>
         <spirit:busType spirit:library="signal" spirit:name="clock" spirit:vendor="xilinx.com" spirit:version="1.0"/>
@@ -248,7 +248,7 @@
               <spirit:name>CLK</spirit:name>
             </spirit:logicalPort>
             <spirit:physicalPort>
-              <spirit:name>PHY2_GTX_CLK</spirit:name>
+              <spirit:name>PHY1_GTX_CLK</spirit:name>
             </spirit:physicalPort>
           </spirit:portMap>
         </spirit:portMaps>
@@ -453,13 +453,13 @@
           </spirit:wire>
         </spirit:port>
         <spirit:port>
-          <spirit:name>PHY1_GTX_CLK</spirit:name>
+          <spirit:name>PHY2_GTX_CLK</spirit:name>
           <spirit:wire>
             <spirit:direction>out</spirit:direction>
           </spirit:wire>
         </spirit:port>
         <spirit:port>
-          <spirit:name>PHY2_GTX_CLK</spirit:name>
+          <spirit:name>PHY1_GTX_CLK</spirit:name>
           <spirit:wire>
             <spirit:direction>out</spirit:direction>
           </spirit:wire>
@@ -567,7 +567,7 @@
           </spirit:wire>
         </spirit:port>
         <spirit:port>
-          <spirit:name>PHY2_RESETN</spirit:name>
+          <spirit:name>PHY1_RESETN</spirit:name>
           <spirit:wire>
             <spirit:direction>out</spirit:direction>
             <spirit:vector>
@@ -577,7 +577,7 @@
           </spirit:wire>
         </spirit:port>
         <spirit:port>
-          <spirit:name>PHY1_RESETN</spirit:name>
+          <spirit:name>PHY2_RESETN</spirit:name>
           <spirit:wire>
             <spirit:direction>out</spirit:direction>
             <spirit:vector>
@@ -714,8 +714,8 @@
       <spirit:adHocConnection>
         <spirit:name>clk_wiz_0_clk_125</spirit:name>
         <spirit:internalPortReference spirit:componentRef="clk_wiz_0" spirit:portRef="clk_125"/>
-        <spirit:externalPortReference spirit:portRef="PHY2_GTX_CLK"/>
         <spirit:externalPortReference spirit:portRef="PHY1_GTX_CLK"/>
+        <spirit:externalPortReference spirit:portRef="PHY2_GTX_CLK"/>
         <spirit:internalPortReference spirit:componentRef="system_ila_0" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="proc_sys_reset_125" spirit:portRef="slowest_sync_clk"/>
         <spirit:internalPortReference spirit:componentRef="RX2_TX1" spirit:portRef="clk_125"/>
@@ -832,8 +832,8 @@
       <spirit:adHocConnection>
         <spirit:name>proc_sys_reset_1_peripheral_aresetn</spirit:name>
         <spirit:internalPortReference spirit:componentRef="proc_sys_reset_125" spirit:portRef="peripheral_aresetn"/>
-        <spirit:externalPortReference spirit:portRef="PHY1_RESETN"/>
         <spirit:externalPortReference spirit:portRef="PHY2_RESETN"/>
+        <spirit:externalPortReference spirit:portRef="PHY1_RESETN"/>
         <spirit:internalPortReference spirit:componentRef="gmii_to_xgmii" spirit:portRef="GMII_RESETN"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>

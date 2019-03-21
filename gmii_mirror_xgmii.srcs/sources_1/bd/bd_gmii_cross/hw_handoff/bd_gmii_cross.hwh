@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Oct 26 04:18:24 2018" VIVADOVERSION="2018.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Mar 22 04:48:12 2019" VIVADOVERSION="2018.2">
 
   <SYSTEMINFO ARCH="kintexu" BOARD="em.avnet.com:ku040:part0:1.0" DEVICE="xcku040" NAME="bd_gmii_cross" PACKAGE="fbva676" SPEEDGRADE="-1"/>
 
@@ -48,12 +48,12 @@
         <CONNECTION INSTANCE="RX2_TX1_gmii_to_rgmii_0" PORT="TX_CTRL_OUT"/>
       </CONNECTIONS>
     </PORT>
-    <PORT CLKFREQUENCY="125000000" DIR="O" NAME="PHY1_GTX_CLK" SIGIS="clk" SIGNAME="clk_wiz_0_clk_125">
+    <PORT CLKFREQUENCY="125000000" DIR="O" NAME="PHY2_GTX_CLK" SIGIS="clk" SIGNAME="clk_wiz_0_clk_125">
       <CONNECTIONS>
         <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_125"/>
       </CONNECTIONS>
     </PORT>
-    <PORT CLKFREQUENCY="125000000" DIR="O" NAME="PHY2_GTX_CLK" SIGIS="clk" SIGNAME="clk_wiz_0_clk_125">
+    <PORT CLKFREQUENCY="125000000" DIR="O" NAME="PHY1_GTX_CLK" SIGIS="clk" SIGNAME="clk_wiz_0_clk_125">
       <CONNECTIONS>
         <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_125"/>
       </CONNECTIONS>
@@ -135,12 +135,12 @@
         <CONNECTION INSTANCE="eth10g_0_eth_ctrl_0" PORT="rx_loss"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="0" NAME="PHY2_RESETN" RIGHT="0" SIGIS="undef" SIGNAME="proc_sys_reset_125_peripheral_aresetn">
+    <PORT DIR="O" LEFT="0" NAME="PHY1_RESETN" RIGHT="0" SIGIS="rst" SIGNAME="proc_sys_reset_125_peripheral_aresetn">
       <CONNECTIONS>
         <CONNECTION INSTANCE="proc_sys_reset_125" PORT="peripheral_aresetn"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="0" NAME="PHY1_RESETN" RIGHT="0" SIGIS="rst" SIGNAME="proc_sys_reset_125_peripheral_aresetn">
+    <PORT DIR="O" LEFT="0" NAME="PHY2_RESETN" RIGHT="0" SIGIS="undef" SIGNAME="proc_sys_reset_125_peripheral_aresetn">
       <CONNECTIONS>
         <CONNECTION INSTANCE="proc_sys_reset_125" PORT="peripheral_aresetn"/>
       </CONNECTIONS>
@@ -2110,8 +2110,8 @@
         </PORT>
         <PORT CLKFREQUENCY="125000000" DIR="O" NAME="clk_125" SIGIS="clk" SIGNAME="clk_wiz_0_clk_125">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="PHY2_GTX_CLK"/>
             <CONNECTION INSTANCE="External_Ports" PORT="PHY1_GTX_CLK"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="PHY2_GTX_CLK"/>
             <CONNECTION INSTANCE="system_ila_0" PORT="clk"/>
             <CONNECTION INSTANCE="proc_sys_reset_125" PORT="slowest_sync_clk"/>
             <CONNECTION INSTANCE="RX2_TX1_fifo_read_throttle_0" PORT="CLK"/>
@@ -19831,8 +19831,8 @@
         <PORT DIR="O" LEFT="0" NAME="interconnect_aresetn" RIGHT="0" SIGIS="rst"/>
         <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" RIGHT="0" SIGIS="rst" SIGNAME="proc_sys_reset_125_peripheral_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="PHY1_RESETN"/>
             <CONNECTION INSTANCE="External_Ports" PORT="PHY2_RESETN"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="PHY1_RESETN"/>
             <CONNECTION INSTANCE="gmii_to_xgmii_fifo_generator_0" PORT="s_aresetn"/>
             <CONNECTION INSTANCE="gmii_to_xgmii_fifo_generator_1" PORT="s_aresetn"/>
             <CONNECTION INSTANCE="gmii_to_xgmii_gmii_to_xgmil_0" PORT="RESETN"/>

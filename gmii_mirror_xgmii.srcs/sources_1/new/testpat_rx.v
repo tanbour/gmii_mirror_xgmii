@@ -1,14 +1,14 @@
 
 // Copyright (C) Akira Higuchi  ( https://github.com/ahiguti )
-// Copyright (C) DeNA Co., Ltd. ( https://dena.com )
+// Copyright (C) DeNA Co.,Ltd. ( https://dena.com )
 // All rights reserved.
 // See COPYRIGHT.txt for details
 
 module testpat_rx(
 input CLK,
 input RESETN,
-input TEST_PKT,
-input [15:0] TEST_PKTLEN,
+input STARTBTN,
+input [15:0] PKTLEN,
 input [63:0] IN_RXD,
 input [3:0] IN_RXLEN,
 input IN_FCS_EN,
@@ -25,6 +25,7 @@ reg fcs_en;
 reg fcs_correct;
 reg [15:0] len_rem;
 reg [3:0] gap;
+reg [63:0] cnt;
 
 assign OUT_RXD = rxd;
 assign OUT_RXLEN = rxlen;
@@ -39,14 +40,15 @@ always @(posedge CLK) begin
         fcs_correct <= 0;
         len_rem <= 0;
         gap <= 0;
+        cnt <= 0;
     end else begin
         rxd <= 0;
         rxlen <= 0;
-        if (TEST_PKT) begin
+        if (STARTBTN) begin
             if (gap != 0) begin
                 gap <= gap - 1;
                 if (gap == 1) begin
-                    len_rem <= TEST_PKTLEN == 0 ? 64 : TEST_PKTLEN;
+                    len_rem <= PKTLEN == 0 ? 64 : PKTLEN;
                 end
             end else begin
                 if (len_rem > 8) begin
@@ -56,8 +58,9 @@ always @(posedge CLK) begin
                 end else begin
                     len_rem <= 0;
                     rxlen <= len_rem;
-                    rxd <= 64'hffffffffffffffff;
-                    gap <= 3;
+                    rxd <= cnt;
+                    cnt <= cnt + 1;
+                    gap <= 1;
                 end
             end
             fcs_en <= 1;

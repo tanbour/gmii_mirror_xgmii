@@ -1,6 +1,6 @@
 
 // Copyright (C) Akira Higuchi  ( https://github.com/ahiguti )
-// Copyright (C) DeNA Co., Ltd. ( https://dena.com )
+// Copyright (C) DeNA Co.,Ltd. ( https://dena.com )
 // All rights reserved.
 // See COPYRIGHT.txt for details
 
@@ -23,11 +23,10 @@ s_axi_AXILiteS_RRESP,
 s_axi_AXILiteS_BVALID,
 s_axi_AXILiteS_BREADY,
 s_axi_AXILiteS_BRESP,
-RD_DATA,
+RD_ADDR_EN, RD_ADDR, RD_DATA_EN, RD_DATA,
 WR_EN, WR_ADDR, WR_DATA
 );
-parameter WIDTH_RD = 256;
-parameter WIDTH_WR = 256;
+parameter ADDR_WIDTH = 8;
 input CLK;
 input RESETN;
 input s_axi_AXILiteS_AWVALID;
@@ -47,20 +46,22 @@ output [1:0] s_axi_AXILiteS_RRESP;
 output s_axi_AXILiteS_BVALID;
 input s_axi_AXILiteS_BREADY;
 output [1:0] s_axi_AXILiteS_BRESP;
-input [WIDTH_RD-1:0] RD_DATA;
+output RD_ADDR_EN;
+output [ADDR_WIDTH-1:0] RD_ADDR;
+input RD_DATA_EN;
+input [31:0] RD_DATA;
 output WR_EN;
-output [WIDTH_WR/32-1:0] WR_ADDR;
+output [ADDR_WIDTH-1:0] WR_ADDR;
 output [31:0] WR_DATA;
 
 reg [1:0] rstate;
+reg [7:0] raddr;
+reg rd_addr_en;
+reg [31:0] rd_data;
 reg [1:0] wstate;
 reg [7:0] waddr;
-reg [7:0] raddr;
-reg [31:0] rdata;
 reg [31:0] wr_data;
 reg wr_en;
-
-wire [31:0] rd_data[0:WIDTH_RD/32-1];
 
 localparam wstate_idle = 2'd0;
 localparam wstate_data = 2'd1;
@@ -73,21 +74,16 @@ assign s_axi_AXILiteS_AWREADY = (wstate == wstate_idle);
 assign s_axi_AXILiteS_WREADY = (wstate == wstate_data);
 assign s_axi_AXILiteS_ARREADY = (rstate == rstate_idle);
 assign s_axi_AXILiteS_RVALID = (rstate == rstate_data);
-assign s_axi_AXILiteS_RDATA = rdata;
+assign s_axi_AXILiteS_RDATA = rd_data;
 assign s_axi_AXILiteS_RRESP = 0;
 assign s_axi_AXILiteS_BVALID = (wstate == wstate_resp);
 assign s_axi_AXILiteS_BRESP = 0;
 
-generate
-genvar i;
-for (i = 0; i < WIDTH_RD / 32; i = i + 1) begin: b1
-  assign rd_data[i] = RD_DATA[i*32+31:i*32];
-end
-endgenerate
-
 assign WR_EN = wr_en;
 assign WR_ADDR = waddr;
 assign WR_DATA = wr_data;
+assign RD_ADDR_EN = rd_addr_en;
+assign RD_ADDR = raddr;
 
 integer j;
 always @(posedge CLK) begin
@@ -95,19 +91,18 @@ always @(posedge CLK) begin
     wstate <= wstate_idle;
     rstate <= rstate_idle;
     waddr <= 0;
+    rd_addr_en <= 0;
     raddr <= 0;
-    rdata <= 0;
-    for (j = 0; j < WIDTH_WR / 32; j = j + 1) begin
-      wr_data[j] <= 0;
-    end
+    rd_data <= 0;
     wr_en <= 0;
   end else begin
+    rd_addr_en <= 0;
     wr_en <= 0;
     if (wstate == wstate_idle && s_axi_AXILiteS_AWVALID) begin
       waddr <= s_axi_AXILiteS_AWADDR / 4;
       wstate <= wstate_data;
     end else if (wstate == wstate_data && s_axi_AXILiteS_WVALID) begin
-      if (waddr < WIDTH_WR / 32) begin
+      if (waddr < (1 << ADDR_WIDTH)) begin
         wr_data = s_axi_AXILiteS_WDATA;
         wr_en <= 1;
       end
@@ -117,13 +112,18 @@ always @(posedge CLK) begin
     end
     if (rstate == rstate_idle && s_axi_AXILiteS_ARVALID) begin
       raddr <= s_axi_AXILiteS_ARADDR / 4;
-      rdata <= 0;
+      rd_addr_en <= 1;
+      rd_data <= 0;
       rstate <= rstate_busy;
     end else if (rstate == rstate_busy) begin
-      if (raddr < WIDTH_RD / 32) begin
-        rdata <= rd_data[raddr];
+      if (raddr < (1 << ADDR_WIDTH)) begin
+        if (RD_DATA_EN) begin
+          rd_data <= RD_DATA;
+          rstate <= rstate_data;
+        end
+      end else begin
+        rstate <= rstate_data;
       end
-      rstate <= rstate_data;
     end else if (rstate == rstate_data && s_axi_AXILiteS_RREADY) begin
       rstate <= rstate_idle;
     end

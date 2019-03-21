@@ -25,16 +25,16 @@ preplace inst fifo_generator_0 -pg 1 -lvl 2 -y 170 -defaultsOSRD
 preplace netloc eth_phy_ctrl_0_MDC 1 4 1 NJ
 preplace netloc clk_wiz_0_locked 1 0 1 NJ
 preplace netloc gmii_to_rgmii_0_TX_CTRL_OUT 1 4 1 NJ
-preplace netloc CLK_1 1 0 4 NJ 200 380 60 880 80 NJ
+preplace netloc CLK_1 1 0 4 NJ 200 380 60 890 80 NJ
 preplace netloc fifo_read_throttle_0_CTRL_OUT 1 3 2 1220 20 NJ
 preplace netloc gmii_to_rgmii_0_TX_D_OUT 1 4 1 NJ
-preplace netloc fifo_generator_0_m_axis_tdata 1 2 1 860
+preplace netloc fifo_generator_0_m_axis_tdata 1 2 1 870
 preplace netloc rgmii_to_gmii_0_GMII_CTRL_OUT 1 1 1 390
-preplace netloc proc_sys_reset_0_interconnect_aresetn 1 1 1 380
-preplace netloc fifo_read_throttle_0_READ_EN_OUT 1 2 2 870 100 1210
-preplace netloc PHY1_RX_CLK_1 1 0 2 20 210 390
+preplace netloc proc_sys_reset_0_interconnect_aresetn 1 1 1 400
+preplace netloc fifo_read_throttle_0_READ_EN_OUT 1 2 2 860 280 1210
+preplace netloc PHY1_RX_CLK_1 1 0 2 20 290 390
 preplace netloc xlconstant_0_dout 1 3 1 1240J
-preplace netloc proc_sys_reset_1_peripheral_reset 1 0 4 10J 40 NJ 40 890 90 1240J
+preplace netloc proc_sys_reset_1_peripheral_reset 1 0 4 NJ 280 NJ 280 880 100 NJ
 preplace netloc fifo_read_throttle_0_DATA_OUT 1 3 2 1230 220 NJ
 preplace netloc rgmii_to_gmii_0_GMII_D_OUT 1 1 1 N
 preplace netloc PHY1_RX_CTRL_1 1 0 1 NJ
@@ -42,7 +42,7 @@ preplace netloc PHY1_RX_D_1 1 0 1 NJ
 preplace netloc Net 1 4 1 NJ
 preplace netloc reset_1 1 0 1 NJ
 preplace netloc fifo_generator_0_m_axis_tvalid 1 2 1 N
-levelinfo -pg 1 -10 200 630 1050 1390 1560 -top 0 -bot 490
+levelinfo -pg 1 0 200 630 1050 1390 1560 -top 0 -bot 490
 ",
 }
 0

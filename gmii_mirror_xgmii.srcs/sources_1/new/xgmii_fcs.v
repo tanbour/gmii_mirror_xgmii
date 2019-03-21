@@ -1,6 +1,6 @@
 
 // Copyright (C) Akira Higuchi  ( https://github.com/ahiguti )
-// Copyright (C) DeNA Co., Ltd. ( https://dena.com )
+// Copyright (C) DeNA Co.,Ltd. ( https://dena.com )
 // All rights reserved.
 // See COPYRIGHT.txt for details
 
@@ -35,7 +35,8 @@ xgmii_rx_align xg_align(.CLK(CLK), .RESET(RESET), .XGMII_RXC(XGMII_RXC),
 xgmii_rx_fcs xg_rxfcs(.CLK(CLK), .RESET(RESET), .RXLEN_IN(rxlen), .RXD_IN(rxd),
   .RXLEN_OUT(RXLEN_OUT), .RXD_OUT(RXD_OUT), .FCS_EN(FCS_EN), .FCS(fcs),
   .CRC32VAL(crc32val), .DEBUG_OUT(DEBUG_RX_FCS));
-xgmii_tx_fcs xg_txfcs(.CLK(CLK), .RESET(RESET), .TXLEN_IN(TXLEN_IN),
-  .TXD_IN(TXD_IN), .TXC_OUT(XGMII_TXC), .TXD_OUT(XGMII_TXD), .DEBUG_OUT(DEBUG_TX_FCS));
+xgmii_tx_fcs xg_txfcs(.CLK(CLK), .RESET(RESET), .CLOCK_EN(1), .TXLEN_IN(TXLEN_IN),
+  .TXD_IN(TXD_IN), .TXHD_IN(0), .TXC_OUT(XGMII_TXC), .TXD_OUT(XGMII_TXD),
+  .DEBUG_OUT(DEBUG_TX_FCS));
 
 endmodule
